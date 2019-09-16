@@ -2,8 +2,24 @@
 <aiml>
   <category>
     <pattern>*</pattern>
-    <template>Hey i am Alice</template>
+    <template>Hey i am Alice You might wanna start by telling your name Type "my name is Your_name"</template>
   </category>
+  <category>
+      <pattern>my name is *</pattern>
+      <template>
+          <random>
+              <li>
+                    Hello <set name = "username"> <star/>! </set>         
+              </li>
+              <li>
+                  Hey <set name = "username"> <star/> tell me more about yourself </set>
+              </li>
+              <li>
+                  <image>https://cdn.pixabay.com/photo/2016/06/15/16/16/man-1459246_960_720.png</image>
+              </li>
+          </random>
+      </template>  
+   </category> 
 <category>
     <pattern>what is your name</pattern>
     <template>My name is cinya</template>
